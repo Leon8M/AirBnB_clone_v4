@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Starts a Flask Web Application """
+import os
+import sys
 from models import storage
 from models.state import State
 from models.city import City
@@ -9,6 +11,10 @@ from flask import Flask, render_template
 import uuid
 
 app = Flask(__name__)
+
+project_path = os.path.expanduser('~/AirBnB_clone_v4')
+sys.path.append(project_path)
+
 
 @app.teardown_appcontext
 def close_db(error):
