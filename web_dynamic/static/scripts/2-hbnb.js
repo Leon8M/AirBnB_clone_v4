@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Make a GET request to the API status endpoint
-    fetch('http://0.0.0.0:5001/api/v1/status/')
+    fetch('http://52.201.219.250/api/v1/status/')
         .then(response => response.json())
         .then(data => {
             const apiStatusDiv = document.querySelector('#api_status');
